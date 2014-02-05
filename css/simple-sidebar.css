@@ -11,6 +11,7 @@
   position: fixed;
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: 1000;
   transition: all 0.4s ease 0s;
 }
@@ -53,11 +54,12 @@
 .sidebar-nav > .sidebar-brand {
   height: 65px;
   line-height: 60px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #999999;
+  color: #AAA;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -82,7 +84,7 @@
 }
 
 .inset {
-  padding: 20px;
+  padding: 0px;
 }
 
 @media (max-width:767px) {
@@ -114,4 +116,3 @@
   padding: 15px;
 }
 
-}
