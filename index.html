@@ -51,12 +51,6 @@
     		$(".dataTables_filter").find("input").val(t).trigger("keyup");
     	}
 
-    	// clear search listener on sidebar-brand
-    	$('.sidebar-brand').live('click', function() {
-    		console.log("reset filter");
-			searchTag("");
-			event.stopPropagation();
-		});
     
     	var tags = [];
     	function getTags() {
@@ -76,9 +70,6 @@
 				found += ", "+tags[x];
    				$(".sidebar-nav").append('<li class="sidebar-tags"><a href="#">'+tags[x]+'</a></li>');
    			}
-   			$('.sidebar-tags').live('click', function() {
-				searchTag($(this).text());
-			});
    			
     	}
 		$(document).ready(function() {
