@@ -10,20 +10,49 @@
     <title>Passwords</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
-<!--    <link href="https:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+    <link href="css/custom.css" rel="stylesheet">
     
     <!-- Publicatoin list CSS -->
     <link rel="stylesheet" href="css/bib-publication-list.css"/>
+    
+    <!-- load publications to table FIXME: bib-publication has to work with current jQuery version -->
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/bib-list-min.js" type="text/javascript"></script>
+<!--    <script src="js/custom.js" type="text/javascript"></script>-->
 
 </head>
 
 <body>
 
+
+
+<!-- Button trigger modal -->
+<!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
+<!--  Launch demo modal-->
+<!--</button>-->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body" id="bib-modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
         <!-- Page content -->
-            <div class="page-content inset">
+            <div class="page-content">
                 <section id="publications" class="content-section text-center">
 		        	<h1>Passwords</h1>
 					<div class="publications-section">
@@ -37,9 +66,6 @@
             </div>
 
     <!-- JavaScript -->
-    <!-- load publications to table FIXME: bib-publication has to work with current jQuery version -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script src="js/bib-list-min.js" type="text/javascript"></script>
     <script type="text/javascript">
     
     	// search for a tag
@@ -73,6 +99,7 @@
 			return true;
 		});
 	</script>
+	
 </body>
 
 </html>

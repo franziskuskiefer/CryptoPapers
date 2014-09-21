@@ -1,0 +1,13 @@
+body.modal-open,
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+	margin-right: 13px;
+}
+
+.modal-footer {
+	margin-top: 0px;
+}
+
+.modal-dialog h4 {
+	font-weight: bold;
+}
