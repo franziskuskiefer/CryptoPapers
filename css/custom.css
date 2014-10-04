@@ -11,3 +11,20 @@ body.modal-open,
 .modal-dialog h4 {
 	font-weight: bold;
 }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.marketing-btn {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+}
+
+.highlight:hover {
+  background-color: #EEE;
+}

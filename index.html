@@ -1,105 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+<!--    <link rel="icon" href="favicon.ico">-->
 
-    <title>Passwords</title>
+    <title>Crypto Papers</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+
     <!-- Add custom CSS here -->
     <link href="css/custom.css" rel="stylesheet">
-    
-    <!-- Publicatoin list CSS -->
-    <link rel="stylesheet" href="css/bib-publication-list.css"/>
-    
-    <!-- load publications to table FIXME: bib-publication has to work with current jQuery version -->
-    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/bib-list-min.js" type="text/javascript"></script>
-<!--    <script src="js/custom.js" type="text/javascript"></script>-->
+  </head>
 
-</head>
+  <body>
 
-<body>
-
-
-
-<!-- Button trigger modal -->
-<!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
-<!--  Launch demo modal-->
-<!--</button>-->
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="http://kiefer.cf">About</a></li>
+        </ul>
+        <h3 class="text-muted">Crypto Papers</h3>
       </div>
-      <div class="modal-body" id="bib-modal-body">
+
+      <div class="jumbotron">
+        <h1>Crypto & Security Literature</h1>
+        <p class="lead">
+        	A handpicked collection of cryptography and security papers to several topics.
+        </p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+      <div class="row marketing">
+        <div class="row-eq-height">
+		    <div class="col-md-6 highlight">
+		      <h2>Passwords</h2>
+		      <p>
+		      	Password based cryptography is concerned with cryptography from low-entropy secrets.
+				In contrast to conventional cryptographic algorithms and protocols, secrets used here have low-entropy, such that an adversary is able to iterate through all possible secrets in reasonable time.
+				This leads directly to the inherent threat to everything password related: so-called dictionary attacks.
+		      </p>
+		      <br/><br/>
+		      <p><a class="btn btn-primary marketing-btn" href="passwords.html" role="button">View details &raquo;</a></p>
+		    </div>
+		    <div class="col-md-6 highlight">
+		      <h2>Cloud Computing</h2>
+		      <p>
+		      	Cloud computing is the marketing title for many different things in cryptography.
+		      	This collection is mainly concerned with efficient set protocols for large sets and homomorphic cryptography to work on data in a privacy preserving manner.
+		      </p>
+		      <br/><br/>
+		      <p><a class="btn btn-primary marketing-btn" href="clouds.html" role="button">View details &raquo;</a></p>
+		   </div>
+      	</div>
       </div>
-    </div>
-  </div>
-</div>
 
-        <!-- Page content -->
-            <div class="page-content">
-                <section id="publications" class="content-section text-center">
-		        	<h1>Passwords</h1>
-					<div class="publications-section">
-						<div class="container">
-						    <div class="col-md-12">
-						        <table id="pubTable" class="display"></table>
-						    </div>
-						</div>
-					</div>
-				</section>
-            </div>
+      <div class="footer">
+        <p>&copy; Franziskus Kiefer 2014</p>
+      </div>
 
-    <!-- JavaScript -->
-    <script type="text/javascript">
-    
-    	// search for a tag
-    	function searchTag(t) {
-    		$(".dataTables_filter").find("input").val(t).trigger("keyup");
-    	}
+    </div> <!-- /container -->
 
-    
-    	var tags = [];
-    	function getTags() {
-    		$('.tag').each(function(i, obj) {
-    			var ts = $(this).text().split(",");
-    			for (t in ts) {
-    				t = ts[t].trim();
-					if ( t != "" && tags.indexOf(t) == -1){
-						tags.push(t);
-					}
-    			}
-			});
-			tags.sort();
-			
-   			var found = "";
-   			for (x in tags) {
-				found += ", "+tags[x];
-   				$(".sidebar-nav").append('<li class="sidebar-tags"><a href="#">'+tags[x]+'</a></li>');
-   			}
-   			
-    	}
-		$(document).ready(function() {
-			bibtexify("passwords.bib", "pubTable", getTags);
-			return true;
-		});
-	</script>
-	
-</body>
-
+  </body>
 </html>
+
