@@ -116,3 +116,48 @@ div.bibinfo pre { clear:both; }
 td .note {
 	display: none;
 }
+
+pre {
+    -moz-tab-size:    4;
+    -o-tab-size:      4;
+    -webkit-tab-size: 4;
+    -ms-tab-size:     4;
+    tab-size:         4;
+}
+
+.bibkey {
+    float: left;
+    display : inline-block;
+    min-width: 80px;
+    margin-left: 50px;
+}
+
+.bibvalue {
+    float: left;
+    display : inline-block;
+    min-width: 150px;
+}
+
+.bibtexdiv {
+    float: left;
+    display : inline-block;
+    margin-right: 5px;
+}
+
+body {
+	overflow-y: scroll;
+}
+
+body.modal-open,
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+	margin-right: 13px;
+}
+
+.modal-footer {
+	margin-top: 0px;
+}
+
+.modal-dialog h4 {
+	font-weight: bold;
+}
